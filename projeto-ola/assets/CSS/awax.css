@@ -39,8 +39,8 @@ header {
     height: 50px;
     color: var(--cor-padrao);
     transform: rotate(-45deg);
-    margin-top: 8px;
-    margin-left: 19px;
+    margin-top: 7px;
+    margin-left: 17px;
 }
 
 .header {
@@ -164,6 +164,7 @@ header {
     display: flex;
     max-width: 1140;
     flex-wrap: wrap;
+    min-height: 400px;
 }
 
 .container.about {
@@ -184,7 +185,7 @@ header {
 
 .container .about_header h4 {
     color: rgba(128, 128, 128, 0.705);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .container .about_itens {
@@ -227,7 +228,141 @@ header {
     box-shadow: 0 0 8px black;
 }
 
-.container .about_video iframe{
+.container .about_video iframe {
     width: 100%;
     height: 100%;
+}
+
+/*Serviços*/
+
+.services {
+    background-color: black;
+    flex-direction: column;
+}
+
+.services .services_header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services .services_header h1 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.services .services_header h4 {
+    color: rgb(156, 155, 155);
+    font-weight: 600;
+}
+
+.services_itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.services_itens .itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 320px;
+    height: 200px;
+    padding: 15px;
+    border-left: 2px solid rgba(124, 123, 123, 0.705);
+}
+
+.services_itens .final {
+    border-right: 2px solid rgba(124, 123, 123, 0.705);
+}
+
+.services_itens .itens img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.services_itens .itens h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.services_itens .itens p {
+    margin-top: 5px;
+    color: rgb(185, 182, 182);
+    text-transform: uppercase;
+    font-size: .68rem;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+/*Projetos*/
+
+.projects{
+    min-height: 600px;
+    flex-direction: column;
+}
+
+.projects .project_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.projects .project_header h1{
+    text-transform: uppercase;   
+}
+
+.projects .project_header h4{
+    text-transform: uppercase;
+    color: rgba(124, 123, 123, 0.705);
+    font-weight: 600;
+
+}
+
+.project_menu{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project_menu ul{
+    display: flex;
+    padding: 0 15px;
+    background-color: rgba(128, 128, 128, 0.486);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    cursor: pointer;
+}
+
+.project_menu ul li{
+    padding: 14px 15px 11px 15px;
+    color: rgb(65, 65, 65);
+    font-size: .8rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.26);
+    border-bottom: 3px solid transparent;
+    transition-duration: .3s;
+}
+
+.project_menu ul li:hover{
+    border-bottom: 3px solid var(--cor-padrao);
+}
+
+.project_menu ul .final{
+    border-right: none;
+}
+
+.project_menu ul .selecionado{
+    border-bottom: 3px solid var(--cor-padrao);
 }
