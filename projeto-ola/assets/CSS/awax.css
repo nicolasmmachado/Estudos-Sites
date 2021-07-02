@@ -245,6 +245,8 @@ header {
 .services {
     background-color: black;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .services .services_header {
@@ -272,7 +274,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 1140px;
 }
 
 .services_itens .itens {
@@ -281,7 +283,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 320px;
+    max-width: 280px;
     height: 200px;
     padding: 15px;
     border-left: 2px solid rgba(124, 123, 123, 0.705);
@@ -449,6 +451,19 @@ header {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../complementos/bg.jpg);
     background-color: black;
     display: flex;
+    overflow: hidden;
+}
+
+.team .team_slides{
+    width: 300vw;
+    height: 100%;
+    display: flex;
+}
+
+.team .team_slide{
+    width: 100vw;
+    height: 100%;
+    display: flex;
     flex-direction: column;
 }
 
@@ -457,9 +472,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px auto 20px auto;
+    margin: 50px auto 20px auto;
     text-transform: uppercase;
-     
 }
 
 .team .team_header h1{
@@ -475,9 +489,12 @@ header {
     min-height: 350px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     justify-content: center;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 50px auto;
 }
+
+
 
 .team .team_pic{
     display: flex;
@@ -488,7 +505,7 @@ header {
     margin: 10px;
     padding: 10px;
     border-radius: 4px;
-    width: 280px;
+    min-width: 280px;
     height: 350px;
     text-transform: uppercase;
 }
@@ -506,17 +523,19 @@ header {
     top: 30px;
 }
 
-.team .team_icon img{
-    width: 27px;
-    height: 27px;
+.team .team_icon a{
+    display: inline-flex;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
     background-color: gray;
-    padding: 5px;
+    padding: 7px;
     border-radius: 50%;
     cursor: pointer;
     transition-duration: .3s;
 }
 
-.team .team_icon img:hover{
+.team .team_icon a:hover{
     background-color: var(--cor-padrao);
 }
 
@@ -524,11 +543,11 @@ header {
     background-color: var(--cor-padrao);
 }
 
-.team .team_slides{
+.team .team_pointer{
     position: relative;
     bottom: 20px;
     display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .team .pointer{
@@ -547,4 +566,84 @@ header {
 
 .team .active{
     background-color: var(--cor-padrao);
+}
+
+/*Clientes*/
+
+.clients{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.clients .client_slides{
+    width: 300vw;
+    display: flex;
+    margin: auto;
+}
+
+.clients .client_slide{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+.clients h4{
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.clients img{
+    width: 140px;
+    margin-bottom: 30px;
+}
+
+.clients h2{
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.clients h3{
+    color: #555;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.clients p{
+    margin: 20px auto;
+    max-width: 750px;
+    padding: 20px;
+    font-size: .8rem;
+    color: #555;
+}
+
+.clients .client_pointer{
+    display: flex;
+    margin: auto;
+}
+
+.clients .pointer{
+    padding: 5px;
+    border: 2px solid var(--cor-padrao);
+    border-radius: 50%;
+    margin: 0 5px 20px 5px;
+}
+
+.clients .active{
+    background-color: var(--cor-padrao);
+}
+
+.sponsors{
+    margin: 20px auto;
+    width: 1140px;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
 }
